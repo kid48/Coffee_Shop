@@ -6,32 +6,83 @@ header  {
     background: beige;
     overflow: hidden;
 }
- .menu {
-     display: none;
- }
+
 .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 
 }
-.item {
-    border: solid 1px #000  ;
-    margin-right: 1%;
-    height: 40vh;
-    flex: 1;
+/*.item {*/
+/*    border: solid 1px #000  ;*/
+/*    margin-right: 1%;*/
+/*    height: 40vh;*/
+/*    flex: 1;*/
 
 
+/*}*/
+
+/* Mobile Phone */
+@media (max-width: 426px) {
+    #logo {
+        width: 120vw;
+    }
+    .description {
+        font-size: 1.5em;
+        color: red;
+    }
+    .navbar-pc {
+        display: none;
+    }
+    .item-photo {
+        width: 90vw;
+        margin: auto;
+    }
+    .item {
+
+    }
+    .menu {
+        display: none;
+    }
 }
-img {
-    width: 100%;
-    min-width: 200px;
-    max-height: 200px;
+/* Tablet */
+@media (min-width: 700px) {
+    .item {
+        border: #2b2724 1px solid;
+        flex: 1 0 calc(33.333% - 15px);
+        max-width: calc(33.333% - 15px);
+    }
+    .navbar-pc {
+        overflow: hidden;
+    }
+    header {
+
+    }
+    #logo {
+        display: none;
+
+    }
+    #logo-navbar {
+        width: 50vw ;
+    }
+    .menu {
+        display: block;
+        overflow: hidden;
+    }
+    .description {
+        font-size: 1.5em;
+        color: greenyellow;
+    }
+    .item-photo {
+        width: 100%;
+    }
 }
+
 
 header ul li {
     float: left;
     list-style: none;
-    margin: 10px;
 
 }
 
