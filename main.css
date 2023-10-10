@@ -1,84 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Oswald:wght@300&display=swap');
+
 body {
     font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
 }
-header  {
+
+header {
     background: beige;
     overflow: hidden;
 }
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-
-}
-/*.item {*/
-/*    border: solid 1px #000  ;*/
-/*    margin-right: 1%;*/
-/*    height: 40vh;*/
-/*    flex: 1;*/
-
-
-/*}*/
-
-/* Mobile Phone */
-@media (max-width: 426px) {
-    #logo {
-        width: 120vw;
-    }
-    .description {
-        font-size: 1.5em;
-        color: red;
-    }
-    .navbar-pc {
-        display: none;
-    }
-    .item-photo {
-        width: 90vw;
-        margin: auto;
-    }
-    .item {
-
-    }
-    .menu {
-        display: none;
-    }
-}
-/* Tablet */
-@media (min-width: 700px) {
-    .item {
-        border: #2b2724 1px solid;
-        flex: 1 0 calc(33.333% - 15px);
-        max-width: calc(33.333% - 15px);
-    }
-    .navbar-pc {
-        overflow: hidden;
-    }
-    header {
-
-    }
-    #logo {
-        display: none;
-
-    }
-    #logo-navbar {
-        width: 50vw ;
-    }
-    .menu {
-        display: block;
-        overflow: hidden;
-    }
-    .description {
-        font-size: 1.5em;
-        color: greenyellow;
-    }
-    .item-photo {
-        width: 100%;
-    }
-}
-
 
 header ul li {
     float: left;
@@ -88,4 +19,114 @@ header ul li {
 
 footer {
     background: #2b2724;
+}
+.navbar-pc {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+/* Mobile Phone */
+@media (max-width: 426px) {
+    #logo {
+        width: 65vw;
+    }
+
+    .description {
+        font-size: 1.5em;
+        color: red;
+    }
+
+    .navbar-pc {
+        display: none;
+    }
+
+    .item-photo {
+        width: 90vw;
+        margin: auto;
+    }
+
+    .item {
+
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@media (min-width: 427px) {
+    #logo {
+        display: none;
+    }
+    #logo-navbar {
+        width: 40vw;
+    }
+}
+
+/* Tablet */
+@media (min-width: 700px) {
+    .item {
+        border: #2b2724 1px solid;
+        flex: 1 0 calc(33.333% - 15px);
+        max-width: calc(33.333% - 15px);
+    }
+
+
+
+    header {
+
+    }
+
+    #logo {
+        display: none;
+
+    }
+
+    #logo-navbar {
+        width: 20vw;
+    }
+
+    .menu {
+        display: block;
+        overflow: hidden;
+    }
+
+    .description {
+        font-size: 1.5em;
+        color: greenyellow;
+    }
+
+    .item-photo {
+        width: 100%;
+    }
+}
+/* Laptop */
+@media (min-width: 1024px) {
+
+}
+/* Beatiful Button */
+button {
+    background: #ffffff;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    padding: 10px 35px;
+    transition: all 0.3s;
+    position: relative;
+
+}
+button:hover {
+    background: black;
+    color: white;
+    transition: all 0.3s;
+}
+button:active {
+    top: 2px;
 }
