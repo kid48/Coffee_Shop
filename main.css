@@ -113,7 +113,7 @@ footer {
 
 }
 /* Beatiful Button */
-button {
+.buy {
     background: #ffffff;
     color: black;
     font-family: 'Oswald', sans-serif;
@@ -122,11 +122,15 @@ button {
     position: relative;
 
 }
-button:hover {
+.buy:hover {
     background: black;
     color: white;
     transition: all 0.3s;
 }
-button:active {
+.buy:active {
     top: 2px;
+}
+/* Dropdown */
+#myDropdown {
+    display: none;
 }
