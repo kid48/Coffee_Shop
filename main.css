@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald:wght@300&display=swap');
+
 
 body {
-    font-family: 'Oswald', sans-serif;
+
     margin: 0;
     padding: 0;
+    background: #ECE5E4;
+}
+
+h1 {
+    margin: 0 10px;
 }
 
 header {
@@ -28,6 +34,7 @@ footer {
 }
 
 .container {
+    font-family: 'Oswald', sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -36,10 +43,27 @@ footer {
 
 }
 
+.ad {
+    font-family: 'Indie Flower', cursive;
+    color: #02333E;
+}
+
+.ad img {
+    width: 100%;
+}
+
+.rating {
+    color: #6CBEBF;
+}
+
 /* Mobile Phone */
 @media (max-width: 426px) {
     #logo {
         width: 65vw;
+    }
+
+    .ad p {
+        margin: 0 10px;
     }
 
     header ul {
@@ -53,6 +77,11 @@ footer {
     .description {
         font-size: 1.5em;
         color: red;
+    }
+
+    .p-menu1 {
+        height: 100%;
+        display: block;
     }
 
     .navigation {
@@ -85,8 +114,16 @@ footer {
         display: none;
     }
 
+    .ad p {
+        margin: 0 12px;
+    }
+
     #logo-navbar {
         width: 40vw;
+    }
+
+    .p-menu1 {
+        display: none;
     }
 }
 
@@ -139,6 +176,11 @@ footer {
 
 }
 
+.description {
+    font-weight: 700;
+}
+
+
 /* Beatiful Button */
 .buy {
     background: #ffffff;
@@ -151,7 +193,7 @@ footer {
 }
 
 .buy:hover {
-    background: black;
+    background: #02333E;
     color: white;
     transition: all 0.3s;
 }
@@ -166,11 +208,6 @@ footer {
 }
 
 /*Dropdown menu*/
-
-.p-menu1 {
-    height: 100%;
-    display: block;
-}
 
 
 /* Hamburger */
@@ -223,7 +260,9 @@ footer {
 /* Menu */
 .menu1 {
     width: 100%;
-    background-color: #02173F;
+    background-color: #02333E;
+    color: #ECE5E4;
+
     margin: 0;
     display: -ms-grid;
     display: grid;
@@ -239,6 +278,11 @@ footer {
     z-index: 120;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+.link1 {
+    text-decoration: none;
+    color: #ECE5E4;
 }
 
 .menu1 a:first-child {
