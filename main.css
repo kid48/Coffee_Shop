@@ -59,16 +59,13 @@ footer {
 /* Mobile Phone */
 @media (max-width: 426px) {
 
-    .parent-container {
-        display: grid;
-        grid-template-columns: repeat(1fr, 5) ;
-        grid-template-rows: repeat(1fr, 5) ;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+    .grid4, .grid5 {
+    display: none;
     }
-    .grid1 { grid-area: 2 / 1 / 5 / 6;}
-    .grid2 { grid-area: 1 / 1 / 2 / 6;}
-    .grid3 { grid-area: 5 / 1 / 6 / 6;}
+    .container {
+        flex-direction: column;
+        align-content: center;
+    }
 
     #logo {
         width: 65vw;
@@ -76,6 +73,11 @@ footer {
 
     .ad p {
         margin: 0 10px;
+    }
+
+    .item {
+
+        margin: auto;
     }
 
     header ul {
@@ -139,6 +141,7 @@ footer {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
 /* Tablet */
 .parent-container {
     display: grid;
