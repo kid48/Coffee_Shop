@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat+Alternates&family=Oswald:wght@300&display=swap');
 
 
 body {
@@ -44,8 +44,8 @@ footer {
 }
 
 .ad {
-    font-family: 'Indie Flower', cursive;
-    color: #02333E;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #000;
 }
 
 .ad img {
@@ -58,6 +58,18 @@ footer {
 
 /* Mobile Phone */
 @media (max-width: 426px) {
+
+    .parent-container {
+        display: grid;
+        grid-template-columns: repeat(1fr, 5) ;
+        grid-template-rows: repeat(1fr, 5) ;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .grid1 { grid-area: 2 / 1 / 5 / 6;}
+    .grid2 { grid-area: 1 / 1 / 2 / 6;}
+    .grid3 { grid-area: 5 / 1 / 6 / 6;}
+
     #logo {
         width: 65vw;
     }
@@ -128,7 +140,21 @@ footer {
 }
 
 /* Tablet */
-@media (min-width: 700px) {
+.parent-container {
+    display: grid;
+    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+    grid-template-rows: 0.5fr repeat(2, 1fr) 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.grid1 { grid-area: 2 / 2 / 4 / 5; }
+.grid2 { grid-area: 1 / 1 / 2 / 6; }
+.grid3 { grid-area: 4 / 1 / 5 / 6; }
+.grid4 { grid-area: 2 / 1 / 4 / 2; }
+.grid5 { grid-area: 2 / 5 / 4 / 6; }
+
+
     .item {
         border: #2b2724 1px solid;
         flex: 1 0 calc(33.333% - 15px);
