@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Eshop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="swiper.css">
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -32,15 +35,16 @@
             </section>
             <!-- end dropdown menu-->
             <nav class="menu1 hidden">
-                <a class="link1" href="">Our Models</a>
-                <a class="link1" href="">Specialties</a>
-                <a class="link1" href="">About</a>
+                <a class="link1" href="">Home</a>
+                <a class="link1" href="">Menu</a>
+                <a class="link1" href="">Reservation</a>
+                <a class="link1" href="">Pages</a>
                 <a class="link1" href="">Blog</a>
                 <a class="link1" href="">Contact</a>
             </nav>
 
 
-            <ul class="navbar-pc">
+            <div class="navbar-pc">
                 <div class="logo"><img id="logo-navbar" src="assets/logo.svg"></div>
                 <div class="nav-links">
                     <a href="#">Home</a>
@@ -53,22 +57,15 @@
                     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
 
-            </ul>
+            </div>
         </header>
 
-        <section class="splide" aria-label="Splide Basic HTML Example">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">Slide 01</li>
-                    <li class="splide__slide">Slide 02</li>
-                    <li class="splide__slide">Slide 03</li>
-                </ul>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/ad/1%20slider%20with%20nadpis.jpg" alt=""></div>
             </div>
-        </section>
-        <!--        <div class="ad">-->
-        <!--            <img class="ad-image" src="assets/ad/pexels-rdne-stock-project-4920855.jpg" alt="">-->
-
-        <!--        </div>-->
+        </div>
 
     </div>
     <div class="grid1">
@@ -165,9 +162,13 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="main.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
 <script>
-    new Splide('#image-carousel').mount();
+    var swiper = new Swiper(".mySwiper", {});
 </script>
+<script src="main.js"></script>
 </body>
 </html>
