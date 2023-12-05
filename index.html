@@ -41,22 +41,38 @@
 
 
             <ul class="navbar-pc">
-                <li><img id="logo-navbar" src="assets/logo.svg"></li>
-                <li>
-                    Menu
-                </li>
+                <div class="logo"><img id="logo-navbar" src="assets/logo.svg"></div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Menu</a>
+                    <a href="#">Reservation</a>
+                    <a href="#">Pages</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+
             </ul>
         </header>
 
+        <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">Slide 01</li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
+        </section>
+        <!--        <div class="ad">-->
+        <!--            <img class="ad-image" src="assets/ad/pexels-rdne-stock-project-4920855.jpg" alt="">-->
 
-        <div class="ad">
-            <img class="ad-image" src="assets/ad/pexels-rdne-stock-project-4920855.jpg" alt="">
-
-        </div>
+        <!--        </div>-->
 
     </div>
     <div class="grid1">
-        <h1 class="suka" >MAMAKAVA Coffee SHOP</h1>
+        <h1 class="suka">MAMAKAVA Coffee SHOP</h1>
         <hr>
         <div class="container">
             <div class="item">
@@ -150,5 +166,8 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="main.js"></script>
+<script>
+    new Splide('#image-carousel').mount();
+</script>
 </body>
 </html>

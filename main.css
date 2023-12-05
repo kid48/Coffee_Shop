@@ -13,15 +13,11 @@ h1 {
 }
 
 header {
-    background: beige;
+    background: #ECE5E4;
     overflow: hidden;
 }
 
-header ul li {
-    float: left;
-    list-style: none;
 
-}
 
 footer {
     background: #2b2724;
@@ -29,8 +25,29 @@ footer {
 
 .navbar-pc {
     overflow: hidden;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.nav-links {
+    display: flex;
+
+}
+
+.navbar-pc a {
+    float: left;
+    padding: 10px 14px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+.navbar-pc a:hover {
+    color: #c7a17a;
 }
 
 .container {
@@ -58,9 +75,11 @@ footer {
     font-size: 10px;
     width: 40%;
 }
+
 .item {
     overflow: hidden;
 }
+
 .inter_container {
     overflow: hidden;
     display: flex;
@@ -68,8 +87,32 @@ footer {
     align-items: center;
 
 }
+
+.news-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: center;
+
+}
+
+.news-item i {
+    font-size: 30px;
+}
+
+.news-title {
+    text-align: left;
+    flex: 1;
+
+}
+
+.news-date {
+    text-align: right;
+    white-space: nowrap;
+}
+
 /* Mobile Phone */
-@media (max-width: 426px) {
+@media (max-width: 430px) {
 
     .grid4, .grid5 {
         display: none;
@@ -141,6 +184,7 @@ footer {
         font-size: 20px;
         margin: 0;
     }
+
     .suka {
         font-size: 20px;
         text-transform: uppercase;
@@ -148,7 +192,7 @@ footer {
     }
 }
 
-@media (min-width: 427px) {
+@media (min-width: 431px) {
     #logo {
         display: none;
     }
