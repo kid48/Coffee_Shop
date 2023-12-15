@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat+Alternates&family=Oswald:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+:root {
+  --bg-color: #ece5e4;
+  --font-color: #02333e;
+  --stars-color: #6cbebf;
+}
 
 body {
   margin: 0;
   padding: 0;
-  background: #ece5e4;
+  background: var(--bg-color);
   font-size: 100%; /* Default to 16px */
 }
 #navbar {
@@ -13,9 +20,17 @@ h1 {
   margin: 0 0.625em; /* Originally 10px */
 }
 
-header, footer {
-  background: #ece5e4;
+header,
+footer {
+  background: var(--bg-color);
   overflow: hidden;
+}
+.welcome h2 {
+  font-family: 'Merriweather', serif;
+  color: #c7a17a;
+  font-size: 14px;
+  text-align: center;
+
 }
 .suka {
   font-size: 20px;
@@ -42,7 +57,7 @@ header, footer {
   padding: 0.625em 0.875em; /* Originally 10px 14px */
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: var(--font-color);
   font-family: "Oswald", sans-serif;
   font-size: 1.25em; /* Assuming default is 16px, originally 20px */
   font-weight: 600;
@@ -63,7 +78,7 @@ header, footer {
 
 .ad {
   font-family: "Montserrat Alternates", sans-serif;
-  color: #000;
+  color: var(--font-color);
 }
 
 .ad img {
@@ -71,18 +86,20 @@ header, footer {
 }
 
 .rating {
-  color: #6cbebf;
+  color: var(--stars-color);
   margin: 0;
   font-size: 0.625em; /* Originally 10px */
   width: 40%;
 }
 
-/* ... Further modifications continue with same pattern ... */
-
-/* Continued Conversion with em Units */
+.inter_container {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* Mobile Phone */
-@media (max-width: 47.9375em) { /* 767px */
+@media (max-width: 767.8px) {
+  /* 767px */
   #navbar {
     display: flex;
   }
@@ -97,7 +114,7 @@ header, footer {
   }
 
   #logo {
-    width: 20vw;
+    width: 60vw;
   }
 
   .ad p {
@@ -118,7 +135,7 @@ header, footer {
 
   .name {
     font-size: 1em;
-    color: red;
+    color: var(--font-color);
     margin: 0;
     text-transform: uppercase;
   }
@@ -154,6 +171,7 @@ header, footer {
   .price {
     font-size: 1.25em; /* Assuming default is 16px, originally 20px */
     margin: 0;
+    padding: 0;
   }
 
   .suka {
@@ -162,11 +180,12 @@ header, footer {
   }
 }
 
-@media (min-width: 48em) and (max-width: 64em) { /* 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1440px) {
+  /* 768px - 1024px */
   /* Tablet */
   .parent-container {
     display: grid;
-    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+    grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
     grid-template-rows: 0.5fr 1fr 0.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -195,7 +214,6 @@ header, footer {
   }
 
   .item {
-    border: #2b2724 1px solid;
     flex: 1 0 calc(33.333% - 0.9375em); /* Adjusted from 15px */
     max-width: calc(33.333% - 0.9375em); /* Adjusted from 15px */
   }
@@ -206,9 +224,6 @@ header, footer {
 
   #dropbtn {
     display: none;
-  }
-
-  header {
   }
 
   #logo {
@@ -226,16 +241,20 @@ header, footer {
 
   .name {
     font-size: 1.5em;
-    color: greenyellow;
+    color: var(--font-color);
   }
 
   .item-photo {
     width: 100%;
   }
+  .container {
+    gap: 1.407em;
+    margin: 15px;
+  }
 }
 
 /* Laptop */
-@media (min-width: 64em) { /* 1024px */
+@media (min-width: 1024px) {
   .parent-container {
     display: block;
   }
@@ -243,6 +262,12 @@ header, footer {
   }
   .item {
     flex: 25%;
+  }
+  .price {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
   }
 }
 
@@ -348,7 +373,7 @@ header, footer {
 
 .link1 {
   text-decoration: none;
-  color: #ece5e4;
+  color: var(--bg-color);
 }
 
 .menu1 a:first-child {
