@@ -32,13 +32,18 @@ footer {
   text-align: center;
 
 }
-.suka {
+.suka, .sponsors h1{
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
   padding: 5px;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
+}
+
+.sponsors {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .navbar-pc {
@@ -84,6 +89,7 @@ footer {
 .ad img {
   width: 100%;
 }
+
 
 .rating {
   color: var(--stars-color);
@@ -256,8 +262,35 @@ footer {
 /* Laptop */
 @media (min-width: 1024px) {
   .parent-container {
-    display: block;
+    display: grid;
+    grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    align-items: center;
   }
+
+  .grid1 {
+    grid-area: 2 / 2 / 4 / 5;
+  }
+
+  .grid2 {
+    grid-area: 1 / 1 / 2 / 6;
+  }
+
+  .grid3 {
+    grid-area: 4 / 1 / 5 / 6;
+  }
+
+  .grid4 {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+
+  .grid5 {
+    grid-area: 2 / 5 / 4 / 6;
+  }
+
   .container {
   }
   .item {
