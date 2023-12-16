@@ -104,6 +104,9 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+.name {
+  text-transform: uppercase;
+}
 
 /* Mobile Phone */
 @media (max-width: 767.8px) {
