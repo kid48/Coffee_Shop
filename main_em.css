@@ -13,6 +13,9 @@ body {
   background: var(--bg-color);
   font-size: 100%; /* Default to 16px */
 }
+a {
+  text-decoration: none;
+}
 #navbar {
   display: none;
 }
