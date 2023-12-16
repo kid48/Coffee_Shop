@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eshop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="swiper.css" />
+    <link rel="stylesheet" href="main_em.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --bg-color: #ece5e4;
+        --font-color: #02333e;
+        --stars-color: #6cbebf;
+      }
+
+      .parent-container {
+        display: grid;
+        grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
+        grid-template-rows: 0.25fr 1fr 0.5fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .grid1 {
+        grid-area: 2 / 2 / 4 / 5;
+      }
+
+      .grid2 {
+        grid-area: 1 / 1 / 2 / 6;
+      }
+
+      .grid3 {
+        grid-area: 4 / 1 / 5 / 6;
+      }
+
+      .grid4 {
+        grid-area: 2 / 1 / 4 / 2;
+      }
+
+      .grid5 {
+        grid-area: 2 / 5 / 4 / 6;
+      }
+
+      .content {
+        display: flex;
+        gap: 20px;
+        font-family: "Oswald", sans-serif;
+        font-size: 20px;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .name {
+        font-family: "Oswald", sans-serif;
+        font-weight: 600;
+        color: var(--font-color);
+        margin: 0;
+      }
+      .review {
+        font-size: 15px;
+        color: var(--stars-color);
+      }
+      .counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      .counter .decrease,
+      .counter .increase {
+        background-color: #f2f2f2;
+        color: #333;
+        border: none;
+        padding: 15px 15px;
+        cursor: pointer;
+      }
+
+      .counter .count {
+        width: 40px;
+        text-align: center;
+        margin: 0px 5px;
+        padding: 15px;
+        border: none;
+        background-color: #fff;
+      }
+      .add_to_cart {
+        display: flex;
+        gap: 20px;
+      }
+      .buy_button {
+        padding: 15px 30px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 700;
+        color: #fff;
+        background: #c7a17a;
+        border: 2px solid #c7a17a;
+        font-size: 16px;
+        transition: all 0.5s;
+      }
+      .buy_button:hover {
+        background-color: #000;
+        border-color: #000;
+        transition: all 0.5s;
+      }
+      .brands {
+        margin: 20px;
+      }
+      .brands i {
+        margin: 0 5px;
+        transition: all 0.5s;
+      }
+      .brands i:hover {
+        cursor: pointer;
+        color: #c7a17a;
+        transition: all 0.5s;
+      }
+      /* Mobile */
+      @media (max-width: 500px) {
+        .parent-container {
+            display: block;
+        }
+        .content {
+            flex-direction: column;
+            margin: 7px;
+        }
+        .content img {
+            width: 100%;
+        }
+      }
+      @media (min-width: 500.05px) and (max-width: 1130px) {
+        .parent-container {
+            display: block;
+        }
+        .content {
+            flex-direction: row;
+            margin: 7px;
+        }
+        .content img {
+            width: 40%;
+        }
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="parent-container">
+      <div class="grid4"></div>
+      <div class="grid5"></div>
+      <div class="grid2">
+        <header>
+          <!-- Hamburger dropdown menu -->
+          <section class="p-menu1">
+            <nav id="navbar" class="navigation" role="navigation">
+              <img id="logo" src="assets/no fone.png" />
+              <input id="toggle1" type="checkbox" />
+              <label class="hamburger1" for="toggle1">
+                <div class="top"></div>
+                <div class="meat"></div>
+                <div class="bottom"></div>
+              </label>
+            </nav>
+          </section>
+          <!-- end dropdown menu-->
+          <nav class="menu1 hidden">
+            <a class="link1" href="">Home</a>
+            <a class="link1" href="">Menu</a>
+            <a class="link1" href="">Reservation</a>
+            <a class="link1" href="">Pages</a>
+            <a class="link1" href="">Blog</a>
+            <a class="link1" href="">Contact</a>
+          </nav>
+
+          <div class="navbar-pc">
+            <div class="logo">
+              <img id="logo-navbar" src="assets/no fone.png" />
+            </div>
+            <div class="nav-links">
+              <a href="#">Home</a>
+              <a href="#">Menu</a>
+              <a href="#">Reservation</a>
+              <a href="#">Pages</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+              <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="grid1">
+        <div class="content">
+          <img src="https://i.imgur.com/YsHxuSj.jpg" alt="" />
+          <div class="details">
+            <h1 class="name">MAMAKAVA Coffee Beans</h1>
+            <p class="review">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-regular fa-star"></i> (2 customer reviews)
+            </p>
+            <p class="price">$ 75</p>
+            <p class="description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
+              eligendi pariatur quibusdam molestias repellat aperiam odit,
+              inventore maxime at ea. Iusto facilis atque ipsa, veritatis vel
+              dignissimos eveniet earum sed!
+            </p>
+            <div class="add_to_cart">
+              <div class="counter">
+                <button class="decrease" onclick="changeCount(-1)">-</button>
+                <input type="text" class="count" value="1" readonly />
+                <button class="increase" onclick="changeCount(1)">+</button>
+              </div>
+              <button class="buy_button">ADD TO CART</button>
+            </div>
+            <hr />
+            <p class="category"><b>Category:</b> Coffee</p>
+            <p class="tag"><b>Tag:</b> Paper Bag</p>
+            <hr />
+            <p class="share">
+              <b>SHARE:</b>
+              <span class="brands">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-tumblr"></i>
+                <i class="fa-brands fa-linkedin"></i>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid3">
+      <div id="footerPlaceholder"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".increase").click(function () {
+          var value = parseInt($(".count").val(), 10);
+          value = isNaN(value) ? 0 : value;
+          value++;
+          $(".count").val(value);
+        });
+
+        $(".decrease").click(function () {
+          var value = parseInt($(".count").val(), 10);
+          value = isNaN(value) ? 0 : value;
+          value--;
+          if (value < 1) value = 1; // предотвращаем уход в отрицательное значение
+          $(".count").val(value);
+        });
+      });
+    </script>
+  </body>
+</html>
