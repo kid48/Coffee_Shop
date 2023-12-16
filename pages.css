@@ -1,0 +1,152 @@
+:root {
+  --bg-color: #ece5e4;
+  --font-color: #02333e;
+  --stars-color: #6cbebf;
+}
+
+.parent-container {
+  display: grid;
+  grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
+  grid-template-rows: 0.1fr 1fr 0.5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid1 {
+  grid-area: 2 / 2 / 4 / 5;
+}
+
+.grid2 {
+  grid-area: 1 / 1 / 2 / 6;
+}
+
+.grid3 {
+  grid-area: 4 / 1 / 5 / 6;
+}
+
+.grid4 {
+  grid-area: 2 / 1 / 4 / 2;
+}
+
+.grid5 {
+  grid-area: 2 / 5 / 4 / 6;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  font-family: "Oswald", sans-serif;
+
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+@media (max-with: 2559.9px) {
+  .content {
+    font-size: 20px;
+  }
+}
+
+.name {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: var(--font-color);
+  margin: -15px 0 0 0;
+}
+.review {
+  font-size: 15px;
+  color: var(--stars-color);
+}
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.counter .decrease,
+.counter .increase {
+  background-color: #f2f2f2;
+  color: #333;
+  border: none;
+  padding: 15px 15px;
+  cursor: pointer;
+}
+
+.counter .count {
+  width: 40px;
+  text-align: center;
+  margin: 0px 5px;
+  padding: 15px;
+  border: none;
+  background-color: #fff;
+}
+.add_to_cart {
+  display: flex;
+  gap: 20px;
+}
+.buy_button {
+  padding: 15px 30px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  background: #c7a17a;
+  border: 2px solid #c7a17a;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.buy_button:hover {
+  background-color: #000;
+  border-color: #000;
+  transition: all 0.5s;
+}
+.brands {
+  margin: 20px;
+}
+.brands i {
+  margin: 0 5px;
+  transition: all 0.5s;
+}
+.brands i:hover {
+  cursor: pointer;
+  color: #c7a17a;
+  transition: all 0.5s;
+}
+.description {
+  margin: 15px 0;
+}
+/* Mobile */
+@media (max-width: 500px) {
+  .parent-container {
+    display: block;
+  }
+  .content {
+    flex-direction: column;
+    margin: 7px;
+  }
+  .content img {
+    width: 100%;
+  }
+}
+@media (min-width: 500.05px) and (max-width: 1130px) {
+  .parent-container {
+    display: block;
+  }
+  .content {
+    flex-direction: row;
+    margin: 7px;
+  }
+  .content img {
+    width: 40%;
+  }
+  h3 {
+    margin: 5px;
+  }
+  @media (min-width: 1440px) {
+    .content {
+      font-size: 40px !important;
+    }
+  }
+}

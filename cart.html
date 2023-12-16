@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eshop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="swiper.css" />
+    <link rel="stylesheet" href="main_em.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Add your CSS styles here */
+      body {
+        font-family: "Oswald", sans-serif;
+      }
+      .cart-container {
+        width: 80%;
+        margin: 0 auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        text-align: center;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+      .button1 {
+        background-color: #f0ad4e;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      .cart-total {
+        display: flex;
+        justify-content: space-around;
+      }
+      .cart-total div {
+        margin: 10px 20px;
+      }
+      .coupon {
+        padding: 10px 20px;
+        margin: 4px 2px;
+        font-family: "Oswald", sans-serif;
+        color: #f0ad4e;
+      }
+      ::placeholder {
+        color: #f0ad4e;
+      }
+      .cart-actions {
+        margin: 15px 0;
+      }
+
+
+      .form-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        max-width: 400px;
+        margin: 30px auto;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+    .button:hover {
+        background-color: #45a049;
+    }
+
+    .checkout-container {
+        display: flex;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="parent-container">
+      <div class="grid4"></div>
+      <div class="grid5"></div>
+      <div class="grid2">
+        <header>
+          <!-- Hamburger dropdown menu -->
+          <section class="p-menu1">
+            <nav id="navbar" class="navigation" role="navigation">
+              <a href="index.html"
+                ><img id="logo" src="assets/no fone.png"
+              /></a>
+              <input id="toggle1" type="checkbox" />
+              <label class="hamburger1" for="toggle1">
+                <div class="top"></div>
+                <div class="meat"></div>
+                <div class="bottom"></div>
+              </label>
+            </nav>
+          </section>
+          <!-- end dropdown menu-->
+          <nav class="menu1 hidden">
+            <a class="link1" href="index.html">Home</a>
+            <a class="link1" href="">Menu</a>
+            <a class="link1" href="">Reservation</a>
+            <a class="link1" href="">Pages</a>
+            <a class="link1" href="">Blog</a>
+            <a class="link1" href="">Contact</a>
+          </nav>
+
+          <div class="navbar-pc">
+            <div class="logo">
+              <a href="index.html"
+                ><img id="logo-navbar" src="assets/no fone.png"
+              /></a>
+            </div>
+            <div class="nav-links">
+              <a href="index.html">Home</a>
+              <a href="#">Menu</a>
+              <a href="#">Reservation</a>
+              <a href="#">Pages</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+              <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="grid1">
+        <div class="checkout-container">
+          <div class="cart-container">
+            <table>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+              </tr>
+              <tr>
+                <td>Paper Bag</td>
+                <td>$79.00</td>
+                <td>
+                  <!-- Quantity Selector -->
+                  <button class="button1">-</button>
+                  2
+                  <button class="button1">+</button>
+                </td>
+                <td>$158.00</td>
+              </tr>
+            </table>
+
+            <div class="cart-total">
+              <div>SUBTOTAL: $158.00</div>
+              <div>SHIPPING: Free Shipping</div>
+              <div>TOTAL: $158.00</div>
+            </div>
+          </div>
+
+          <div class="form-container">
+            <form action="/submit-payment" method="post">
+              <h2>Shipping information</h2>
+              <input type="email" placeholder="Email" required />
+
+              <h2>Shipping address</h2>
+              <input type="text" placeholder="Name" required />
+              <select required>
+                <option value="USA">United States</option>
+                <!-- Add other countries as needed -->
+              </select>
+              <input type="text" placeholder="Address" required />
+              
+
+              <h2>Payment details</h2>
+              <div class="card-info">
+                <input
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9\s]{13,19}"
+                  maxlength="19"
+                  placeholder="Card number"
+                  autocomplete="cc-number"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="MM / YY"
+                  pattern="\d{2}\/\d{2}"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="CVC"
+                  pattern="\d{3,4}"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="button">Pay $134.00</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid3">
+      <div id="footerPlaceholder"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
