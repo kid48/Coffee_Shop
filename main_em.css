@@ -15,6 +15,7 @@ body {
 }
 a {
   text-decoration: none;
+  cursor: default;
 }
 #navbar {
   display: none;
@@ -135,6 +136,7 @@ footer {
   .item {
     margin: auto;
   }
+
 
   header ul {
     display: flex; /* Added */

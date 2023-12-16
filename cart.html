@@ -18,6 +18,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       /* Add your CSS styles here */
+      :root {
+        --flex: row;
+      }
+
       body {
         font-family: "Oswald", sans-serif;
       }
@@ -49,6 +53,8 @@
       .cart-total {
         display: flex;
         justify-content: space-around;
+        flex-direction: var(--flex);
+        align-items: center;
       }
       .cart-total div {
         margin: 10px 20px;
@@ -66,24 +72,24 @@
         margin: 15px 0;
       }
 
-
       .form-container {
         background: #fff;
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         max-width: 400px;
         margin: 30px auto;
-    }
-    input, select {
-        width: 100%;
+      }
+      input,
+      select {
+        width: 90%;
         padding: 10px;
         margin: 10px 0;
         border-radius: 4px;
         border: 1px solid #ddd;
-    }
-    .button {
-        background-color: #4CAF50;
+      }
+      .button {
+        background-color: #4caf50;
         color: white;
         padding: 15px 20px;
         margin: 10px 0;
@@ -91,15 +97,43 @@
         border-radius: 4px;
         cursor: pointer;
         width: 100%;
-    }
-    .button:hover {
-        background-color: #45a049;
-    }
-
-    .checkout-container {
+      }
+      .pay-with {
         display: flex;
-    }
+        gap: 10px;
+        flex-direction: var(--flex);
+      }
+      .button-pay {
+        background-color: #000;
+        color: white;
+        padding: 15px 20px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 50%;
+        font-size: 25px;
+      }
+      .button-pay i {
+        /* font-size: 20px; */
+      }
+      .button:hover {
+        background-color: #45a049;
+      }
 
+      .checkout-container {
+        display: flex;
+        flex-direction: var(--flex);
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --flex: column;
+        }
+        .button-pay {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -166,11 +200,11 @@
                 <td>$79.00</td>
                 <td>
                   <!-- Quantity Selector -->
-                  <button class="button1">-</button>
-                  2
-                  <button class="button1">+</button>
+                  <button class="decrease-quantity button1">-</button>
+                  <span class="quantity">2</span>
+                  <button class="increase-quantity button1">+</button>
                 </td>
-                <td>$158.00</td>
+                <td class="total">$158.00</td>
               </tr>
             </table>
 
@@ -182,6 +216,14 @@
           </div>
 
           <div class="form-container">
+            <div class="pay-with">
+              <button class="button-pay">
+                Pay with <i class="fa-brands fa-apple-pay"></i>
+              </button>
+              <button class="button-pay">
+                Pay with <i class="fa-brands fa-google-pay"></i>
+              </button>
+            </div>
             <form action="/submit-payment" method="post">
               <h2>Shipping information</h2>
               <input type="email" placeholder="Email" required />
@@ -193,7 +235,6 @@
                 <!-- Add other countries as needed -->
               </select>
               <input type="text" placeholder="Address" required />
-              
 
               <h2>Payment details</h2>
               <div class="card-info">
@@ -232,5 +273,44 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="main.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Function to update the total price
+        function updateTotal(quantity, price, totalCell) {
+          var singlePrice = parseFloat(price.replace("$", ""));
+          var total = (singlePrice * quantity).toFixed(2);
+          totalCell.text("$" + total);
+            
+            
+        }
+
+        // Increase quantity
+        $(".increase-quantity").click(function () {
+          var quantityCell = $(this).siblings(".quantity");
+          var quantity = parseInt(quantityCell.text()) + 1;
+          quantityCell.text(quantity);
+
+
+          var price = $(this).closest("tr").find(".price").text();
+          var totalCell = $(this).closest("tr").find(".total");
+
+          updateTotal(quantity, price, totalCell);
+        });
+
+        // Decrease quantity
+        $(".decrease-quantity").click(function () {
+          var quantityCell = $(this).siblings(".quantity");
+          var quantity = parseInt(quantityCell.text()) - 1;
+          if (quantity >= 0) {
+            quantityCell.text(quantity);
+
+            var price = $(this).closest("tr").find(".price").text();
+            var totalCell = $(this).closest("tr").find(".total");
+
+            updateTotal(quantity, price, totalCell);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
