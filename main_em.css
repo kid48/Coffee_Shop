@@ -355,8 +355,14 @@ footer {
 }
 /* 4K */
 @media (min-width: 2560px) {
-  .welcome h2{
-      font-size: 40px;
+  body {
+      font-size: 30px;
+  }
+  .welcome h2 {
+    font-size: 40px;
+  }
+  .sponsors h1, .suka {
+    font-size: 50px;
   }
 }
 

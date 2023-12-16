@@ -56,10 +56,17 @@
         display: flex;
         gap: 20px;
         font-family: "Oswald", sans-serif;
-        font-size: 20px;
+
         align-items: flex-start;
         margin-bottom: 15px;
       }
+
+      @media (max-with: 2559.9px) {
+        .content {
+          font-size: 20px;
+        }
+      }
+
       .name {
         font-family: "Oswald", sans-serif;
         font-weight: 600;
@@ -155,6 +162,11 @@
         h3 {
           margin: 5px;
         }
+        @media (min-width: 1440px) {
+          .content {
+            font-size: 40px !important;
+          }
+        }
       }
     </style>
   </head>
@@ -167,7 +179,9 @@
           <!-- Hamburger dropdown menu -->
           <section class="p-menu1">
             <nav id="navbar" class="navigation" role="navigation">
-              <a href="index.html"><img id="logo" src="assets/no fone.png" /></a>
+              <a href="index.html"
+                ><img id="logo" src="assets/no fone.png"
+              /></a>
               <input id="toggle1" type="checkbox" />
               <label class="hamburger1" for="toggle1">
                 <div class="top"></div>
@@ -188,7 +202,9 @@
 
           <div class="navbar-pc">
             <div class="logo">
-              <a href="index.html"><img id="logo-navbar" src="assets/no fone.png" /></a>
+              <a href="index.html"
+                ><img id="logo-navbar" src="assets/no fone.png"
+              /></a>
             </div>
             <div class="nav-links">
               <a href="index.html">Home</a>
@@ -214,25 +230,30 @@
               ><i class="fa-regular fa-star"></i> (2 customer reviews)
             </p>
             <p class="price">$ 75</p>
-            
-              <h3>Taste the Elegance of Exquisite</h3>
-              <p class="description">Blend Dive into the luxurious
-              world of MAMAKAVA Premium Coffee Beans, where every sip promises a
-              journey of extraordinary flavors. Our beans are sourced from the
-              finest high-altitude estates around the globe, ensuring a unique
-              and rich experience in every cup. </p>
-              <h3>Flavor Profile:</h3> <p class="description"> Indulge in the
-              harmonious blend of robust and smooth flavors. Our MAMAKAVA beans
-              offer a delightful balance of chocolaty undertones with subtle
-              hints of citrus and nutty finishes. Perfect for starting your day
-              or as a sophisticated after-dinner treat. </p>
-              <h3>Roast Level:</h3> 
-              <p class="description">We
-              meticulously roast our beans to a precise medium level,
+
+            <h3>Taste the Elegance of Exquisite</h3>
+            <p class="description">
+              Blend Dive into the luxurious world of MAMAKAVA Premium Coffee
+              Beans, where every sip promises a journey of extraordinary
+              flavors. Our beans are sourced from the finest high-altitude
+              estates around the globe, ensuring a unique and rich experience in
+              every cup.
+            </p>
+            <h3>Flavor Profile:</h3>
+            <p class="description">
+              Indulge in the harmonious blend of robust and smooth flavors. Our
+              MAMAKAVA beans offer a delightful balance of chocolaty undertones
+              with subtle hints of citrus and nutty finishes. Perfect for
+              starting your day or as a sophisticated after-dinner treat.
+            </p>
+            <h3>Roast Level:</h3>
+            <p class="description">
+              We meticulously roast our beans to a precise medium level,
               highlighting their natural flavors and aromas. This process
               ensures a coffee that is both bold and smooth, without any
-              overpowering bitterness.</p>
+              overpowering bitterness.
             </p>
+
             <div class="add_to_cart">
               <div class="counter">
                 <button class="decrease" onclick="changeCount(-1)">-</button>
