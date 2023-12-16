@@ -337,17 +337,23 @@ footer {
   #logo-navbar {
     width: 20%;
   }
-
+/* 
   .swiper-slide img {
     width: 60%;
     object-fit: fill;
-  }
+  } */
   .item {
     width: 20%;
   }
   .item img {
     width: 100%;
     object-fit: fill;
+  }
+}
+/* 4K */
+@media (min-width: 2560px) {
+  .welcome h2{
+      font-size: 40px;
   }
 }
 
