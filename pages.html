@@ -25,7 +25,7 @@
       .parent-container {
         display: grid;
         grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
-        grid-template-rows: 0.25fr 1fr 0.5fr;
+        grid-template-rows: 0.1fr 1fr 0.5fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         justify-content: center;
@@ -125,34 +125,37 @@
         color: #c7a17a;
         transition: all 0.5s;
       }
+      .description {
+        margin: 15px 0;
+      }
       /* Mobile */
       @media (max-width: 500px) {
         .parent-container {
-            display: block;
+          display: block;
         }
         .content {
-            flex-direction: column;
-            margin: 7px;
+          flex-direction: column;
+          margin: 7px;
         }
         .content img {
-            width: 100%;
+          width: 100%;
         }
       }
       @media (min-width: 500.05px) and (max-width: 1130px) {
         .parent-container {
-            display: block;
+          display: block;
         }
         .content {
-            flex-direction: row;
-            margin: 7px;
+          flex-direction: row;
+          margin: 7px;
         }
         .content img {
-            width: 40%;
+          width: 40%;
+        }
+        h3 {
+          margin: 5px;
         }
       }
-
-
-
     </style>
   </head>
   <body>
@@ -164,7 +167,7 @@
           <!-- Hamburger dropdown menu -->
           <section class="p-menu1">
             <nav id="navbar" class="navigation" role="navigation">
-              <img id="logo" src="assets/no fone.png" />
+              <a href="index.html"><img id="logo" src="assets/no fone.png" /></a>
               <input id="toggle1" type="checkbox" />
               <label class="hamburger1" for="toggle1">
                 <div class="top"></div>
@@ -185,7 +188,7 @@
 
           <div class="navbar-pc">
             <div class="logo">
-              <img id="logo-navbar" src="assets/no fone.png" />
+              <a href="index.html"><img id="logo-navbar" src="assets/no fone.png" /></a>
             </div>
             <div class="nav-links">
               <a href="index.html">Home</a>
@@ -211,11 +214,24 @@
               ><i class="fa-regular fa-star"></i> (2 customer reviews)
             </p>
             <p class="price">$ 75</p>
-            <p class="description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
-              eligendi pariatur quibusdam molestias repellat aperiam odit,
-              inventore maxime at ea. Iusto facilis atque ipsa, veritatis vel
-              dignissimos eveniet earum sed!
+            
+              <h3>Taste the Elegance of Exquisite</h3>
+              <p class="description">Blend Dive into the luxurious
+              world of MAMAKAVA Premium Coffee Beans, where every sip promises a
+              journey of extraordinary flavors. Our beans are sourced from the
+              finest high-altitude estates around the globe, ensuring a unique
+              and rich experience in every cup. </p>
+              <h3>Flavor Profile:</h3> <p class="description"> Indulge in the
+              harmonious blend of robust and smooth flavors. Our MAMAKAVA beans
+              offer a delightful balance of chocolaty undertones with subtle
+              hints of citrus and nutty finishes. Perfect for starting your day
+              or as a sophisticated after-dinner treat. </p>
+              <h3>Roast Level:</h3> 
+              <p class="description">We
+              meticulously roast our beans to a precise medium level,
+              highlighting their natural flavors and aromas. This process
+              ensures a coffee that is both bold and smooth, without any
+              overpowering bitterness.</p>
             </p>
             <div class="add_to_cart">
               <div class="counter">

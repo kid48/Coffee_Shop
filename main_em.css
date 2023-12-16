@@ -61,7 +61,6 @@ footer {
 }
 
 .navbar-pc a {
-  float: left;
   padding: 0.625em 0.875em; /* Originally 10px 14px */
   text-align: center;
   text-decoration: none;
@@ -144,7 +143,7 @@ footer {
 
   .name {
     font-size: 1em;
-    color: var(--font-color);
+    color: var(--font-color) !important;
     margin: 0;
     text-transform: uppercase;
   }
@@ -168,9 +167,6 @@ footer {
   .item-photo {
     width: 55vw;
     margin: auto;
-  }
-
-  .item {
   }
 
   .menu {
@@ -357,6 +353,7 @@ footer {
 
 .name {
   font-weight: 700;
+  color: var(--font-color);
 }
 
 /* Beautiful Button */
