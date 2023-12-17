@@ -8,8 +8,8 @@
   display: grid;
   grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
   grid-template-rows: 0.1fr 1fr 0.5fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   justify-content: center;
   align-items: center;
 }
@@ -83,7 +83,7 @@
 .counter .count {
   width: 40px;
   text-align: center;
-  margin: 0px 5px;
+  margin: 0 5px;
   padding: 15px;
   border: none;
   background-color: #fff;
