@@ -297,8 +297,6 @@ footer {
     grid-area: 2 / 5 / 4 / 6;
   }
 
-  .container {
-  }
   .item {
     flex: 25%;
   }

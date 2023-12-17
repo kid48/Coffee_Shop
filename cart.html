@@ -15,174 +15,15 @@
     <link rel="stylesheet" href="swiper.css" />
     <link rel="stylesheet" href="main_em.css" />
     <link rel="stylesheet" href="pages.css" />
+    <link rel="stylesheet" href="cart.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      /* Add your CSS styles here */
-      :root {
-        --flex: row;
-      }
-
-      body {
-        font-family: "Oswald", sans-serif;
-      }
-      .cart-container {
-        width: 80%;
-        margin: 0 auto;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-      th,
-      td {
-        text-align: center;
-        padding: 8px;
-        border-bottom: 1px solid #ddd;
-      }
-      .button1 {
-        background-color: #f0ad4e;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        margin: 4px 2px;
-        cursor: pointer;
-      }
-      .cart-total {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: var(--flex);
-        align-items: center;
-      }
-      .cart-total div {
-        margin: 10px 20px;
-      }
-      .coupon {
-        padding: 10px 20px;
-        margin: 4px 2px;
-        font-family: "Oswald", sans-serif;
-        color: #f0ad4e;
-      }
-      ::placeholder {
-        color: #f0ad4e;
-      }
-      .cart-actions {
-        margin: 15px 0;
-      }
-
-      .form-container {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        max-width: 400px;
-        margin: 30px auto;
-      }
-      input,
-      select {
-        width: 90%;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 4px;
-        border: 1px solid #ddd;
-      }
-      .button {
-        background-color: #4caf50;
-        color: white;
-        padding: 15px 20px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
-      }
-      .pay-with {
-        display: flex;
-        gap: 10px;
-        flex-direction: var(--flex);
-      }
-      .button-pay {
-        background-color: #000;
-        color: white;
-        padding: 15px 20px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 50%;
-        font-size: 25px;
-      }
-      .button:hover {
-        background-color: #45a049;
-      }
-
-      .checkout-container {
-        display: flex;
-        flex-direction: var(--flex);
-      }
-
-      @media (max-width: 768px) {
-        :root {
-          --flex: column;
-        }
-        .button-pay {
-          width: 100%;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="parent-container">
       <div class="grid4"></div>
       <div class="grid5"></div>
       <div class="grid2">
-        <header>
-          <!-- Hamburger dropdown menu -->
-          <section class="p-menu1">
-            <nav id="navbar" class="navigation" role="navigation">
-              <a href="index.html"
-                ><img id="logo" src="assets/no fone.png"
-              /></a>
-              <input id="toggle1" type="checkbox" />
-              <label class="hamburger1" for="toggle1">
-                <div class="top"></div>
-                <div class="meat"></div>
-                <div class="bottom"></div>
-              </label>
-            </nav>
-          </section>
-          <!-- end dropdown menu-->
-          <nav class="menu1 hidden">
-            <a class="link1" href="index.html">Home</a>
-            <a class="link1" href="">Menu</a>
-            <a class="link1" href="">Reservation</a>
-            <a class="link1" href="">Pages</a>
-            <a class="link1" href="">Blog</a>
-            <a class="link1" href="">Contact</a>
-            <a class="link1" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a class="link1" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-          </nav>
-
-          <div class="navbar-pc">
-            <div class="logo">
-              <a href="index.html"
-                ><img id="logo-navbar" src="assets/no fone.png"
-              /></a>
-            </div>
-            <div class="nav-links">
-              <a href="index.html">Home</a>
-              <a href="#">Menu</a>
-              <a href="#">Reservation</a>
-              <a href="#">Pages</a>
-              <a href="#">Blog</a>
-              <a href="#">Contact</a>
-              <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-            </div>
-          </div>
-        </header>
+        <div id="headerPlaceholder"></div>
       </div>
       <div class="grid1">
         <div class="checkout-container">
@@ -260,7 +101,9 @@
                 />
               </div>
 
-              <button type="submit" class="button">Pay <span class="fin-total">$79.00</span></button>
+              <button type="submit" class="button">
+                Pay <span class="fin-total">$79.00</span>
+              </button>
             </form>
           </div>
         </div>
