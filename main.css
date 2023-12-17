@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat+Alternates&family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap");
+
+:root {
+    --bg-color: #ece5e4;
+    --font-color: #02333e;
+    --stars-color: #6cbebf;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    font-size: 100%; /* Default to 16px */
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0 0.625em; /* Originally 10px */
+}
+
+/* Mobile Phone */
+@media (max-width: 767.8px) {
+    /* 767px */
+    .grid4,
+    .grid5 {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+        align-content: center;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    /* 768px - 1024px */
+    /* Tablet */
+    .parent-container {
+        display: grid;
+        grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid1 {
+        grid-area: 2 / 2 / 4 / 5;
+    }
+
+    .grid2 {
+        grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .grid3 {
+        grid-area: 4 / 1 / 5 / 6;
+    }
+
+    .grid4 {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    .grid5 {
+        grid-area: 2 / 5 / 4 / 6;
+    }
+
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    .parent-container {
+        display: grid;
+        grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid1 {
+        grid-area: 2 / 2 / 4 / 5;
+    }
+
+    .grid2 {
+        grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .grid3 {
+        grid-area: 4 / 1 / 5 / 6;
+    }
+
+    .grid4 {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    .grid5 {
+        grid-area: 2 / 5 / 4 / 6;
+    }
+}
+
+@media (min-width: 1440px) {
+    .parent-container {
+        display: grid;
+        grid-template-columns: 0.25fr repeat(3, 1fr) 0.25fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid1 {
+        grid-area: 2 / 2 / 4 / 5;
+    }
+
+    .grid2 {
+        grid-area: 1 / 1 / 2 / 6;
+    }
+
+    .grid3 {
+        grid-area: 4 / 1 / 5 / 6;
+    }
+
+    .grid4 {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    .grid5 {
+        grid-area: 2 / 5 / 4 / 6;
+    }
+}

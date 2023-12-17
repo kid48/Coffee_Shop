@@ -43,7 +43,7 @@
   margin-bottom: 15px;
 }
 
-@media (max-with: 2559.9px) {
+@media (max-width: 2559.9px) {
   .content {
     font-size: 20px;
   }
@@ -51,7 +51,7 @@
 
 .name {
   font-family: "Oswald", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--font-color);
   margin: -15px 0 0 0;
 }

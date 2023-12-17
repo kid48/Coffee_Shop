@@ -1,0 +1,164 @@
+.welcome h2 {
+    font-family: "Merriweather", serif;
+    color: #c7a17a;
+    font-size: 14px;
+    text-align: center;
+}
+
+.suka,
+.sponsors h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+.sponsors {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.container {
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.625em; /* Originally 10px */
+    margin: 0.625em 0; /* Originally 10px 0 */
+}
+
+.rating {
+    color: var(--stars-color);
+    margin: 0;
+    font-size: 0.625em; /* Originally 10px */
+    width: 40%;
+}
+
+.inter_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-weight: 700;
+    color: var(--font-color);
+    text-transform: uppercase;
+}
+
+@media (max-width: 767.8px) {
+    .item {
+        margin: auto;
+    }
+
+    .name {
+        font-size: 1em;
+        color: var(--font-color) !important;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .item-photo {
+        width: 55vw;
+        margin: auto;
+    }
+    .price {
+        font-size: 1.25em; /* Assuming default is 16px, originally 20px */
+        margin: 0;
+        padding: 0;
+        color: var(--font-color);
+    }
+    .suka {
+        font-size: 1.25em; /* Assuming default is 16px, originally 20px */
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .item {
+        flex: 1 0 calc(33.333% - 0.9375em); /* Adjusted from 15px */
+        max-width: calc(33.333% - 0.9375em); /* Adjusted from 15px */
+    }
+    .name {
+        font-size: 1.5em;
+        color: var(--font-color);
+    }
+
+    .item-photo {
+        width: 100%;
+    }
+
+    .container {
+        gap: 1.407em;
+        margin: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .item {
+        flex: 25%;
+    }
+
+    .price {
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+        font-weight: 600;
+        color: var(--font-color);
+    }
+}
+
+@media (min-width: 1440px) {
+    .item {
+        width: 20%;
+    }
+
+    .item img {
+        width: 100%;
+        object-fit: fill;
+    }
+}
+
+/* 4K */
+@media (min-width: 2560px) {
+    body {
+        font-size: 30px;
+    }
+
+    .welcome h2 {
+        font-size: 40px;
+    }
+
+    .sponsors h1,
+    .suka {
+        font-size: 50px;
+    }
+}
+
+/* Beautiful Button */
+.buy {
+    background: #ffffff;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    padding: 0.3125em 1.09375em;
+    font-size: 15px;
+    transition: all 0.3s;
+    position: relative;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.625em; /* Adjusted from 10px */
+}
+
+.buy:hover {
+    background: #02333e;
+    color: white;
+    transition: all 0.3s;
+}
+
+.buy:active {
+    top: 0.125em; /* Adjusted from 2px */
+}
+
