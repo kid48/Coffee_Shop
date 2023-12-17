@@ -114,9 +114,6 @@
         width: 50%;
         font-size: 25px;
       }
-      .button-pay i {
-        /* font-size: 20px; */
-      }
       .button:hover {
         background-color: #45a049;
       }
@@ -197,7 +194,18 @@
               </tr>
               <tr>
                 <td>Paper Bag</td>
-                <td>$79.00</td>
+                <td class="price1">$79.00</td>
+                <td>
+                  <!-- Quantity Selector -->
+                  <button class="decrease-quantity button1">-</button>
+                  <span class="quantity">2</span>
+                  <button class="increase-quantity button1">+</button>
+                </td>
+                <td class="total">$158.00</td>
+              </tr>
+              <tr>
+                <td>Paper Bag</td>
+                <td class="price1">$79.00</td>
                 <td>
                   <!-- Quantity Selector -->
                   <button class="decrease-quantity button1">-</button>
@@ -211,7 +219,7 @@
             <div class="cart-total">
               <div>SUBTOTAL: $158.00</div>
               <div>SHIPPING: Free Shipping</div>
-              <div>TOTAL: $158.00</div>
+              <div>TOTAL: <span class="fin-total">$316.00</span></div>
             </div>
           </div>
 
@@ -261,7 +269,7 @@
                 />
               </div>
 
-              <button type="submit" class="button">Pay $134.00</button>
+              <button type="submit" class="button">Pay <span class="fin-total">$316.00</span></button>
             </form>
           </div>
         </div>
@@ -275,39 +283,53 @@
     <script src="main.js"></script>
     <script>
       $(document).ready(function () {
-        // Function to update the total price
-        function updateTotal(quantity, price, totalCell) {
-          var singlePrice = parseFloat(price.replace("$", ""));
-          var total = (singlePrice * quantity).toFixed(2);
-          totalCell.text("$" + total);
-            
-            
+        // Function to format number as price
+        function formatPrice(number) {
+          return "$" + number.toFixed(2);
         }
 
-        // Increase quantity
+        // Function to update the total price for a product
+        function updateProductTotal(quantity, price, totalCell) {
+          var singlePrice = parseFloat(price.slice(1)); // Remove the dollar sign and parse to float
+          var productTotal = singlePrice * quantity;
+          totalCell.text(formatPrice(productTotal));
+          updateFinalTotal(); // Update the final total whenever a product total is updated
+        }
+
+        // Function to update the final total
+        function updateFinalTotal() {
+          var finalTotal = 0;
+          $(".total").each(function () {
+            var productTotal = parseFloat($(this).text().slice(1)); // Remove the dollar sign and parse to float
+            finalTotal += productTotal;
+          });
+          $(".fin-total").text(formatPrice(finalTotal));
+        }
+
+        // Event handler for increase quantity button
         $(".increase-quantity").click(function () {
-          var quantityCell = $(this).siblings(".quantity");
-          var quantity = parseInt(quantityCell.text()) + 1;
-          quantityCell.text(quantity);
+          var quantitySpan = $(this).siblings(".quantity");
+          var quantity = parseInt(quantitySpan.text()) + 1;
+          quantitySpan.text(quantity);
 
-
-          var price = $(this).closest("tr").find(".price").text();
+          var price = $(this).closest("tr").find(".price1").text();
           var totalCell = $(this).closest("tr").find(".total");
 
-          updateTotal(quantity, price, totalCell);
+          updateProductTotal(quantity, price, totalCell);
         });
 
-        // Decrease quantity
+        // Event handler for decrease quantity button
         $(".decrease-quantity").click(function () {
-          var quantityCell = $(this).siblings(".quantity");
-          var quantity = parseInt(quantityCell.text()) - 1;
+          var quantitySpan = $(this).siblings(".quantity");
+          var quantity = parseInt(quantitySpan.text()) - 1;
           if (quantity >= 0) {
-            quantityCell.text(quantity);
+            // Prevents negative quantities
+            quantitySpan.text(quantity);
 
-            var price = $(this).closest("tr").find(".price").text();
+            var price = $(this).closest("tr").find(".price1").text();
             var totalCell = $(this).closest("tr").find(".total");
 
-            updateTotal(quantity, price, totalCell);
+            updateProductTotal(quantity, price, totalCell);
           }
         });
       });
